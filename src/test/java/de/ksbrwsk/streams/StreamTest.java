@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static de.ksbrwsk.streams.Geschlecht.MAENNLICH;
 import static de.ksbrwsk.streams.Geschlecht.WEIBLICH;
+import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -45,7 +45,7 @@ public class StreamTest {
         List<Partner> partners = this.createPartnerList();
         Map<Geschlecht, List<Partner>> groupedBy = partners
                 .stream()
-                .collect(Collectors.groupingBy(Partner::getGeschlecht));
+                .collect(groupingBy(Partner::getGeschlecht));
         groupedBy.entrySet().forEach(log::info);
     }
 

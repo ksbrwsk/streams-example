@@ -140,7 +140,7 @@ public class StreamTest {
     void stream() {
         List<Partner> partners = this.createPartnerList();
         partners
-                .forEach(System.out::println);
+                .forEach(log::info);
     }
 
     @NotNull

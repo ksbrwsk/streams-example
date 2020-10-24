@@ -10,6 +10,7 @@ import java.util.*;
 
 import static de.ksbrwsk.streams.Geschlecht.MAENNLICH;
 import static de.ksbrwsk.streams.Geschlecht.WEIBLICH;
+import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.toList;
 import static org.junit.jupiter.api.Assertions.*;
@@ -55,7 +56,7 @@ public class StreamTest {
         List<Partner> partners = this.createPartnerList();
         partners
                 .stream()
-                .min(Comparator.comparing(Partner::getGeburtsdatum))
+                .min(comparing(Partner::getGeburtsdatum))
                 .ifPresent(log::info);
     }
 
@@ -65,7 +66,7 @@ public class StreamTest {
         List<Partner> partners = this.createPartnerList();
         partners
                 .stream()
-                .max(Comparator.comparing(Partner::getGeburtsdatum))
+                .max(comparing(Partner::getGeburtsdatum))
                 .ifPresent(log::info);
     }
 
@@ -129,7 +130,7 @@ public class StreamTest {
         List<Partner> partners = this.createPartnerList();
         List<Partner> sorted = partners
                 .stream()
-                .sorted(Comparator.comparing(Partner::getNachname)
+                .sorted(comparing(Partner::getNachname)
                         .thenComparing(Partner::getVorname))
                 .collect(toList());
         sorted.forEach(log::info);

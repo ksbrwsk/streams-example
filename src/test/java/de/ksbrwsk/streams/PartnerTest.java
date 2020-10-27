@@ -16,6 +16,5 @@ class PartnerTest {
         assertEquals(partner.getVorname(), "Hans");
         assertEquals(partner.getGeschlecht(), Geschlecht.MAENNLICH);
         assertEquals(partner.getGeburtsdatum(), LocalDate.of(1960, 5, 10));
-
     }
 }

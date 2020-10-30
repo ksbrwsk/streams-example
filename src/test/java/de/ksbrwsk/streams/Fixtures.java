@@ -2,6 +2,7 @@ package de.ksbrwsk.streams;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static de.ksbrwsk.streams.Geschlecht.MAENNLICH;
@@ -10,7 +11,7 @@ import static de.ksbrwsk.streams.Geschlecht.WEIBLICH;
 public class Fixtures {
 
     public static List<Integer> createIntegerList() {
-        return List.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        return Arrays.asList(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
     }
 
     public static List<Partner> createPartnerList() {

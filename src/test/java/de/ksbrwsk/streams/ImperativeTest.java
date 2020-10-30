@@ -4,8 +4,10 @@ import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.IntStream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -21,7 +23,7 @@ public class ImperativeTest {
             sum += number;
         }
         log.info("Summe: {}", sum);
-        assertTrue(sum == 55L);
+        assertEquals(sum, 55L);
     }
 
     @Test
@@ -52,13 +54,8 @@ public class ImperativeTest {
                 list.add(partner);
             }
         }
-        Set<Geschlecht> keySet = groupedBy.keySet();
-        Iterator<Geschlecht> iterator = keySet.iterator();
-        while (iterator.hasNext()) {
-            Geschlecht geschlecht = iterator.next();
-            log.info("---Geschlecht: {}", geschlecht);
-            List<Partner> list = groupedBy.get(geschlecht);
-            log.info(list);
+        for (Map.Entry<Geschlecht, List<Partner>> geschlechtListEntry : groupedBy.entrySet()) {
+            log.info(geschlechtListEntry);
         }
     }
 

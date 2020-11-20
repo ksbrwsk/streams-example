@@ -122,7 +122,7 @@ public class StreamTest {
                 .filter(partner -> partner.getGeschlecht().equals(WEIBLICH))
                 .collect(toList());
         frauen.forEach(log::info);
-        assertTrue(frauen.size()==2);
+        assertEquals(frauen.size(), 2);
     }
 
     @Test

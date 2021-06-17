@@ -1,4 +1,4 @@
-package de.ksbrwsk.streams;
+package de.ksbrwsk.streams.java8;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

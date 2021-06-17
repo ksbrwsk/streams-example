@@ -1,4 +1,4 @@
-package de.ksbrwsk.streams;
+package de.ksbrwsk.streams.java8;
 
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.DisplayName;
@@ -105,6 +105,7 @@ public class ImperativeTest {
         for (Partner partner : partners) {
             if (partner.getNachname().equalsIgnoreCase("borat")) {
                 noneMatch = false;
+                break;
             }
         }
         assertTrue(noneMatch);
@@ -159,15 +160,14 @@ public class ImperativeTest {
     @Test
     @DisplayName("Sortiere die Partnerliste nach Nach- und Vorname")
     void sort() {
-        List<Partner> partners = Fixtures.createPartnerList();
-        Collections.sort(partners, new Comparator<Partner>() {
+        List<Partner> partners = new ArrayList<>(Fixtures.createPartnerList());
+        partners.sort(new Comparator<Partner>() {
             @Override
             public int compare(Partner o1, Partner o2) {
                 return o1.getNachname().compareTo(o2.getNachname());
             }
         });
-        for (Partner partner :
-                partners) {
+        for (Partner partner : partners) {
             log.info(partner);
         }
     }

@@ -1,4 +1,4 @@
-package de.ksbrwsk.streams;
+package de.ksbrwsk.streams.java8;
 
 import org.junit.jupiter.api.Test;
 

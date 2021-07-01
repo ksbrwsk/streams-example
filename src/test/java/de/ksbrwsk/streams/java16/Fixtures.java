@@ -1,7 +1,6 @@
 package de.ksbrwsk.streams.java16;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.stream.Stream;
 
 import static de.ksbrwsk.streams.java16.Geschlecht.MAENNLICH;

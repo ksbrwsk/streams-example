@@ -1,10 +1,10 @@
-package de.ksbrwsk.streams.java16;
+package de.ksbrwsk.streams.java17;
 
 import java.time.LocalDate;
 import java.util.stream.Stream;
 
-import static de.ksbrwsk.streams.java16.Geschlecht.MAENNLICH;
-import static de.ksbrwsk.streams.java16.Geschlecht.WEIBLICH;
+import static de.ksbrwsk.streams.java17.Geschlecht.MAENNLICH;
+import static de.ksbrwsk.streams.java17.Geschlecht.WEIBLICH;
 
 public class Fixtures {
 

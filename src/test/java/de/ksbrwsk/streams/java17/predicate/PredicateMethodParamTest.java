@@ -1,10 +1,9 @@
-package de.ksbrwsk.streams.java16.predicate;
+package de.ksbrwsk.streams.java17.predicate;
 
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.function.Predicate;
-import java.util.stream.Collectors;
 
 public class PredicateMethodParamTest {
 

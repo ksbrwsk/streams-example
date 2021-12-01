@@ -1,4 +1,4 @@
-package de.ksbrwsk.streams.java16;
+package de.ksbrwsk.streams.java17;
 
 public enum Geschlecht {
     MAENNLICH,

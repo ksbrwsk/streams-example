@@ -1,4 +1,4 @@
-package de.ksbrwsk.streams.java16.predicate;
+package de.ksbrwsk.streams.java17.predicate;
 
 import org.junit.jupiter.api.Test;
 

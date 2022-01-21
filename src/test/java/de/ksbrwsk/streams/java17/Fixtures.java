@@ -16,8 +16,10 @@ public class Fixtures {
         return Stream.of(
                 new Partner("Meiser", "Hans", MAENNLICH, LocalDate.of(1960, 5, 10)),
                 new Partner("Poth", "Verona", WEIBLICH, LocalDate.of(1970, 4, 7)),
+                new Partner("Müller", "Fritz", MAENNLICH, LocalDate.of(1958, 4, 9)),
                 new Partner("Beckenbauer", "Franz", MAENNLICH, LocalDate.of(1945, 9, 20)),
                 new Partner("Nielsen", "Brigitte", WEIBLICH, LocalDate.of(1959, 7, 16)),
+                new Partner("Müller", "Frieda", WEIBLICH, LocalDate.of(1958, 4, 6)),
                 new Partner("Neuer", "Manuel", MAENNLICH, LocalDate.of(1985, 8, 7)));
     }
 }

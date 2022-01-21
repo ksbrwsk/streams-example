@@ -11,10 +11,14 @@ public class AsMatchPredicate {
     void asMatchPredicate() {
         var words = List.of("book", "bookshelf", "bookworm",
                 "bookcase", "bookish", "bookkeeper", "booklet", "bookmark");
-
-        var pred = Pattern.compile("book(worm|mark|keeper)?").asMatchPredicate();
+        var pred = Pattern.compile("book(worm|mark|keeper)?")
+                .asMatchPredicate();
         words.stream()
                 .filter(pred)
                 .forEach(System.out::println);
+        List<String> strings = words.stream()
+                .filter(pred)
+                .toList();
+        System.out.println(strings);
     }
 }

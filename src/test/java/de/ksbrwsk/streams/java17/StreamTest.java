@@ -8,6 +8,7 @@ import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 import static de.ksbrwsk.streams.java17.Geschlecht.WEIBLICH;
@@ -19,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class StreamTest {
 
     @Test
-    @DisplayName("Summmiere alle Integer in der Liste")
+    @DisplayName("Summiere alle Integer in der Liste")
     void sum() {
         Stream<Integer> numbers = Fixtures.createIntegerList();
         int sum = numbers
@@ -29,7 +30,7 @@ public class StreamTest {
     }
 
     @Test
-    @DisplayName("Wandle Strings in Imteger, summmiere alle Integer in der Liste")
+    @DisplayName("Wandle Strings in Integer, summiere alle Integer in der Liste")
     void sumOfStringValues() {
         Stream<String> stringNumbers = Stream.of("1", "2", "3", "4", "5", "6");
         int sum = stringNumbers
@@ -42,8 +43,9 @@ public class StreamTest {
     @DisplayName("Liste alle geraden Zahlen der Liste")
     void evenNumbers() {
         Stream<Integer> numbers = Fixtures.createIntegerList();
+        Predicate<Integer> evenNumberPred = number -> number % 2 == 0;
         List<Integer> even = numbers
-                .filter(number -> number % 2 == 0)
+                .filter(evenNumberPred)
                 .toList();
         even.forEach(log::info);
     }
@@ -79,8 +81,10 @@ public class StreamTest {
     @DisplayName("Liefere den ersten Partner mit Nachnamen X")
     void find() {
         Stream<Partner> partners = Fixtures.createPartnerList();
+        Predicate<Partner> isMeiser = partner -> partner.nachname().equalsIgnoreCase("meiser");
         Optional<Partner> meiser = partners
-                .filter(partner -> partner.nachname().equalsIgnoreCase("meiser"))
+                //.filter(partner -> partner.nachname().equalsIgnoreCase("meiser"))
+                .filter(isMeiser)
                 .findFirst();
         assertTrue(meiser.isPresent());
         log.info(meiser.get());
@@ -96,7 +100,7 @@ public class StreamTest {
     }
 
     @Test
-    @DisplayName("Ein Treffer bei Nachhname X")
+    @DisplayName("Ein Treffer bei Nachname X")
     void oneMatch() {
         Stream<Partner> partners = Fixtures.createPartnerList();
         boolean match = partners
@@ -122,7 +126,7 @@ public class StreamTest {
                 .filter(partner -> partner.geschlecht().equals(WEIBLICH))
                 .toList();
         frauen.forEach(log::info);
-        assertEquals(frauen.size(), 2);
+        assertEquals(frauen.size(), 3);
     }
 
     @Test

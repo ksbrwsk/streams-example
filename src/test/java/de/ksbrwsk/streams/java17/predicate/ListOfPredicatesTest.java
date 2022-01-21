@@ -22,8 +22,7 @@ public class ListOfPredicatesTest {
         var prs = List.of(p1, p2, p3);
 
         var result = words.stream()
-                .filter(prs.stream().reduce(x -> true, Predicate::and))
-                .collect(Collectors.toList());
+                .filter(prs.stream().reduce(x -> true, Predicate::and)).toList();
 
         result.forEach(System.out::println);
     }

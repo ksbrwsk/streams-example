@@ -1,4 +1,4 @@
-package de.ksbrwsk.streams.java17.function;
+package de.ksbrwsk.streams.java21.function;
 
 import org.junit.jupiter.api.Test;
 

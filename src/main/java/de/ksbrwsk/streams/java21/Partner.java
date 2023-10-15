@@ -1,4 +1,4 @@
-package de.ksbrwsk.streams.java17;
+package de.ksbrwsk.streams.java21;
 
 import java.time.LocalDate;
 

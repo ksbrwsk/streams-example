@@ -1,4 +1,4 @@
-package de.ksbrwsk.streams.java17;
+package de.ksbrwsk.streams.java21;
 
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.DisplayName;
@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
 
-import static de.ksbrwsk.streams.java17.Geschlecht.WEIBLICH;
+import static de.ksbrwsk.streams.java21.Geschlecht.WEIBLICH;
 import static java.util.Comparator.comparing;
 import static java.util.stream.Collectors.groupingBy;
 import static org.junit.jupiter.api.Assertions.*;

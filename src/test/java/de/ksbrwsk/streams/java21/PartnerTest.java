@@ -1,10 +1,10 @@
-package de.ksbrwsk.streams.java17;
+package de.ksbrwsk.streams.java21;
 
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
-import static de.ksbrwsk.streams.java17.Geschlecht.MAENNLICH;
+import static de.ksbrwsk.streams.java21.Geschlecht.MAENNLICH;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PartnerTest {
